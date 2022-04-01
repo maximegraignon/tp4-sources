@@ -3,7 +3,7 @@
 /**
  * @author Yves Hélie (conception et réalisation pour @timcsf)
  * @author Ève Février (quelques broutilles d'actualisation de l'exercice)
- * @author Prénom Nom courriel   <---- Utiliser nom complet ou nom d'utilisateur Github
+ * @author Maxime Graignon 2031817@csfoy.ca   <---- Utiliser nom complet ou nom d'utilisateur Github
  *
  * TABLE DES MATIÈRES
  * Normalize
@@ -68,6 +68,7 @@
 
 a {
     transition: color 0.5s;
+
 }
 
 .btn {
@@ -132,29 +133,31 @@ figcaption {
     color: #ffffff;
     padding: 10px 0;
     text-align: center;
+
 }
 @media (min-width: 700px){
     .entete {
-        background: url(../images/entete.jpg) center bottom no-repeat;
+       background: url(../images/entete.jpg) center bottom no-repeat;
         background-size: cover;
         padding: 20px;
     }
     .entete div:first-child{
         min-height: 5rem;
+
     }
 }
 
 /* Menu principal */
 .logo{
-
+     display:inline-block;
+     width:150px;
+     float:left;
 }
 @media (min-width: 700px) {
     .logo {
-
+        width: 180px;
     }
 }
-
-
 
 
 /* Accroche */

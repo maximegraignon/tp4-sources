@@ -10,12 +10,20 @@
 
 <body>
 <!-- Placer ici le lien Aller au contenu -->
-<a href="#contenu" class="screen-reader-only focusable">Allez au contenu</a>
+<a href="#contenu" class="sauter screen-reader-only focusable">Allez au contenu</a>
 
-<header class="entete">
+<header class="entete" role="banner">
     <div class="conteneur">
         <!-- Menu principal -->
-
+<nav class="nav nav--closed">
+    <a href="index.html" class="logo"><img src="images/logo.svg" alt="Kampadejo"></a>
+        <ul class="nav nav__list">
+            <li class="nav__list--item"><a href="#entreprise" class="nav__link">Entreprise</a></li>
+            <li class="nav__list--item"><a href="#expériences" class="nav__link">Expériences</a></li>
+            <li class="nav__list--item"><a href="#services" class="nav__link">Services</a></li>
+            <li class="nav__list--item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+</nav>
     </div>
     <div class="conteneur accroche">
         <div class="texte">
@@ -25,7 +33,7 @@
         </div>
     </div>
 </header>
-<main>
+<main role="main">
     <section class="entreprise conteneur rangee" id="entreprise">
         <div class="cols_7_de_12">
             <h2 id="contenu">Notre entreprise</h2>
@@ -131,7 +139,7 @@
         </div>
     </section>
 </main>
-<footer id="contact">
+<footer id="contact" role="contentinfo">
     <div class="conteneur rangee">
         <div class="cols_4_de_12">
             <h2>Nous joindre</h2>
@@ -149,20 +157,13 @@
                 <div class="cols_6_de_12">
                     <ul>
                         <li>
-                            <span>
-                                <span class="">Courriel :</span>
-                            </span>
-                            <a href="mailto:pleinair@kampadejo.camp">pleinair@kampadejo.camp</a></li>
+                            <span><span class="screen-reader-only">Courriel :</span>
+                                <span class="icone icone--courriel" aria-label="true"></span><a href="mailto:pleinair@kampadejo.camp">pleinair@kampadejo.camp</a></span>
+                        </li>
                         <li>
-                            <span>
-                                <span class="">Téléphone :</span>
-                            </span>
-                            <a href="tel:+14185555543">(418) 555-5543</a></li>
-                        <li>
-                            <span>
-                                <span class="">Facebook :</span>
-                             </span>
-                            <a href="http://www.facebook.com" target="_blank">Facebook</a>
+                            <span><span class="screen-reader-only">Téléphone :</span><span class="icone icone--telephone" aria-label="true"></span></span><a href="tel:+14185555543">(418) 555-5543</a>
+                        </li>
+                        <li><span><span class="screen-reader-only">Facebook :</span><span class="icone icone--facebook" aria-label="true"></span></span><a href="http://www.facebook.com" target="_blank">Facebook</a>
                         </li>
                     </ul>
                 </div>
@@ -175,6 +176,6 @@
     <!-- Icônes par Stephen Hutchings - Collection Typicons - Flaticon -->
 </footer>
 <!-- Placer ici le lien vers le script du menu mobile -->
-
+<script src="js/menu.js"></script>
 </body>
 </html>

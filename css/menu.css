@@ -1,5 +1,5 @@
 /**
- * @author Prénom Nom courriel
+ * @author Maxime Graignon 2031817@csfoy.ca
 **/
 
 /**
@@ -17,10 +17,11 @@
 /* Bouton du menu */
 .nav__control {
     color: aliceblue; /* pour changer la couleur par défaut des textes de bouton (noire) */
-    background-color: rgba(145, 0, 145, 0.2);
+    background-color: transparent;
     border: none;
     padding: 10px;
     min-width: 40px;
+
 }
 @media (min-width: 600px) {
     .nav__control {
@@ -29,8 +30,9 @@
 }
 .nav__control:hover,
 .nav__control:active {
-    color:#fff;
-    background-color: darkmagenta;
+    color: #dba70d;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: solid 2px var(--color-Y);
 }
 
 .nav__control:focus {
@@ -46,10 +48,43 @@
      * de modifier l'apparence du outline par défaut des navigateurs.
      */
     outline-offset: -5px;
-    outline: darkmagenta auto 5px;
+    
+}
+.nav--closed .nav__control:before{
+    background-image: url("../images/ico-menu.svg");
 }
 
+.nav__control:before{
+    display: inline-block;
+    content:"";
+    width: 1em;
+    height: 1em;
+    background-image: url("../images/ico-fermer.svg");
+    vertical-align: top;
+    margin-right: .25em;
+}
+
+
+
+
 /* Liste du menu */
+.nav {
+    text-align: right;
+    font-family: var(--font-family);
+    font-weight: bold;
+    color: var(--color-text);
+
+}
+
+@media (min-width: 600px){
+    .nav {
+        text-align: right;
+        font-family: var(--font-family);
+        font-weight: bold;
+        color: var(--color-text);
+        display: flex;
+    }
+}
 .nav__list {
     margin: 0;
     padding: 0;
@@ -64,11 +99,15 @@
 
 /* Liens du menu */
 .nav__link {
-    background-color: rgba(145, 0, 145, 0.2);
-    display: block;
+    background-color: transparent;;
+    display: flex;
     padding: 5px 10px;
     width: 100%;
+    color: #eeeeee;
+
 }
+
+
 
 .nav__link:link,
 .nav__link:visited {
@@ -77,22 +116,40 @@
 }
 
 .nav__link:hover {
-    color:#fff;
-    background-color: darkmagenta;
+    color:var(--color-Y);
+    background-color: transparent;
+
 }
 
 .nav__link:active {
     color:#fff;
-    background-color: magenta;
+
 }
 
 
 .nav__link:focus,
 .nav__link:focus-visible {
+    border-left: var(--color-Y) solid 5px;
     outline-offset: -5px;
-    outline: darkmagenta auto 5px;
+    outline: none;
+    outline: var(--color-Y);
+    background-color: var(--color-G);
     /*outline: none;*/
 }
+
+@media (min-width: 600px) {
+    .nav__link:focus,
+    .nav__link:focus-visible {
+        border-bottom: var(--color-Y) solid 5px;
+        border-left:none;
+        outline-offset: -5px;
+        outline: none;
+        outline: var(--color-Y);
+        background-color: var(--color-G);
+        /*outline: none;*/
+    }
+}
+
 
 /** Une classe nav__link--active
     sert à définir un état différent
@@ -107,6 +164,9 @@
         border-bottom:5px solid rgba(101, 68, 180, 1);
     }
 }
+
+
+
 
 
 /**
